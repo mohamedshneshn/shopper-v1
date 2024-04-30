@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item-prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-price-new {
+  color: #374151;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.item-price-old {
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}

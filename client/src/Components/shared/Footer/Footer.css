@@ -1,0 +1,23 @@
+.footer-links {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links {
+    padding: 0 10px;
+  }
+  .footer-links a {
+    font-size: 16px;
+    padding: 0 2px;
+  }
+}
+.footer-links a:hover {
+  color: #e74c3c;
+}
