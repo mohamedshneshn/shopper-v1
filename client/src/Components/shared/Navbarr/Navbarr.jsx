@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Nav, Container, Badge, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../../Assets/logo.png";
+import { ShopContext } from "../../../Context/ShopContext";
 
 import "./Navbarr.css";
 
 const Navbarr = () => {
+  const { getTotalCartItems } = useContext(ShopContext);
   return (
     <Navbar expand="lg" className=" navbar-container mt-2  ">
       <Container>
@@ -52,7 +55,7 @@ const Navbarr = () => {
                 bg="danger"
                 className="cart-counter position-absolute top-0 start-100 translate-middle mt-3"
               >
-                0
+                {getTotalCartItems()}
               </Badge>
             </Nav.Link>
           </Nav>

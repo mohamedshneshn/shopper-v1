@@ -16,11 +16,14 @@ import kids_banner from "./Assets/banner_kids.png";
 import women_banner from "./Assets/banner_women.png";
 
 import "./App.css";
+import ScrollToTopOnBack from "./Components/shared/ScrollToTopOnBack/ScrollToTopOnBack";
 
 function App() {
   return (
     <Router>
       <Navbarr />
+      <ScrollToTopOnBack />
+
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route

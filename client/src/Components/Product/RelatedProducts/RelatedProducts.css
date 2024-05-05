@@ -1,0 +1,4 @@
+.popular_items p {
+  max-width: 300px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the paragraph */
+}
