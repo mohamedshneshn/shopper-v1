@@ -1,3 +1,4 @@
+require("dotenv").config(); // Import dotenv to use environment variables
 const express = require("express"); // Import express to create a server
 const mongoose = require("mongoose"); // Import mongoose to connect to the database
 const cors = require("cors"); // Import cors to handle requests from different origins
@@ -6,10 +7,13 @@ const cors = require("cors"); // Import cors to handle requests from different o
 // const placeRoutes = require("./routes/places-routes");
 
 // Connect to the database
+
+mongoose.set("strictQuery", true);
 mongoose
-  .connect(
-    "mongodb+srv://admin:0107307910Msms*@cluster0.7skvcsm.mongodb.net/ShooperApp"
-  )
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connected to the database!");
   })
